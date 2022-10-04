@@ -9,7 +9,7 @@ const Footer = () => {
         <Row>
           <Col>
             <Link to="#" className="nav-link text-white">
-              e-FAMP local market
+              KohisongFarms local market
             </Link>
             <Link to="#" className="nav-link text-white">
               Copyright &copy; 2021
@@ -20,7 +20,9 @@ const Footer = () => {
               Terms and Conditions
             </Link>
             <Link to="#" className="nav-link text-white">
-              <a href="mailto:adamshafiz2@gmail.com">adamshafiz2@gmail.com</a>
+              <a href="codersstudios2022@gmail.com">
+                codersstudios2022@gmail.com
+              </a>
             </Link>
           </Col>
         </Row>
