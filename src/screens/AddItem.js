@@ -8,6 +8,12 @@ function AddItem() {
         <Form.Control placeholder="enter name of product "></Form.Control>
         <Form.Control placeholder="upload image "></Form.Control>
         <form action="/action_page.php">
+          <div class="my-3">
+            <label htmlFor="image">
+              add item image
+              <input type="image" name="image" />
+            </label>
+          </div>
           <select name="cars" class="custom-select mb-3">
             <option selected>SELECT CATEGORY</option>
             <option value="1">CERIALS</option>

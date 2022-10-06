@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { BiHome, BiMenu } from "react-icons/bi";
 import { FiLogOut, FiSearch, FiUser } from "react-icons/fi";
 import { BsPersonSquare } from "react-icons/bs";
+import { BsPlusCircleFill } from "react-icons/bs";
 
 function Header() {
   const { logout, user } = useContext(UserContext);
@@ -31,7 +32,8 @@ function Header() {
                 <FiSearch />
               </span>
             </div>
-            <input className="input2"
+            <input
+              className="input2"
               type="text"
               class="form-control"
               placeholder="Search"
@@ -45,6 +47,12 @@ function Header() {
               <Link to="/" className="nav-link">
                 <BiHome size={25} />
                 HOME
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/additem" className="nav-link">
+                <BsPlusCircleFill size={25} />
+                Add Item
               </Link>
             </Nav.Link>
             <Nav.Link>
