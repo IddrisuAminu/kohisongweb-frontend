@@ -17,12 +17,12 @@ function App() {
       <Header />
       <Container>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/items" element={<Items/>} />
-          <Route path="/additem" element={<AddItem/>} />
-          <Route path="/login" element={<LoginScreen/>} />
-          <Route path="/register" element={<RegisterUserScreen/>} />
-          <Route path="/products" element={<ProductListPage/>} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/items" element={<Items />} />
+          <Route path="/additem" element={<AddItem />} />
+          <Route path="/SIGN UP" element={<LoginScreen />} />
+          <Route path="/register" element={<RegisterUserScreen />} />
+          <Route path="/products" element={<ProductListPage />} />
         </Routes>
       </Container>
       <Footer />

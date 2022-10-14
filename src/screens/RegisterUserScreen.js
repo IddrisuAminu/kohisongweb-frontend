@@ -1,13 +1,13 @@
-import React, { useState, useContext } from "react";
+import React, { useState} from "react";
 import { Button, Col, Form, FormControl, FormGroup, Modal, Row, } from "react-bootstrap";
 
 
 import { FiLock, FiMessageSquare, FiUser } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { UserContext } from "../contexts/UsersContext";
+// import { UserContext } from "../contexts/UsersContext";
 
 const RegisterUserScreen = () => {
-  const { registerUser } = useContext(UserContext);
+  // const { registerUser } = useContext(UserContext);
   const [show, setShow] = useState(true);
 
   const [name, setName] = useState("");
@@ -16,13 +16,13 @@ const RegisterUserScreen = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const newuser = {
-      name,
-      email,
-      password,
-    };
-    registerUser(newuser);
-  }
+  //   const newuser = {
+  //     name,
+  //     email,
+  //     password,
+  //   };
+  //   registerUser(newuser);
+   }
 
   return (
     <>
@@ -93,7 +93,10 @@ const RegisterUserScreen = () => {
                     onChange={(text) => setPassword(text.target.value)}
                   />
                 </FormGroup>
-                <Button type="submit">SIGN UP</Button>
+                <Button type="submit">
+                  {" "}
+                  <Link to="/home">SIGN UP</Link>{" "}
+                </Button>
               </Form>
             </Col>
           </Row>

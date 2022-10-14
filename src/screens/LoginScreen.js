@@ -1,33 +1,33 @@
-import { useContext, useEffect, useState } from "react";
+import {  useState } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
-import { UserContext } from "../contexts/UsersContext";
-import { useLocation,useNavigate, Link } from "react-router-dom";
+// import { UserContext } from "../contexts/UsersContext";
+import { Link } from "react-router-dom";
 
 const LoginScreen = () => {
-  const { loginUser, user } = useContext(UserContext);
-  let location = useLocation();
-  let history = useNavigate();
+  // const { loginUser, user } = useContext(UserContext);
+  // let location = useLocation();
+  // let history = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [show, setShow] = useState(true);
 
-  const redirect = location.search ? location.search.split("=")[1] : "/";
+  // const redirect = location.search ? location.search.split("=")[1] : "/";
 
-  useEffect(() => {
-    if (user.token) {
-      history.push(redirect);
-    }
-  }, [history, user, redirect]);
+  // useEffect(() => {
+  //   if (user.token) {
+  //     history.push(redirect);
+  //   }
+  // }, [history,  redirect]);
 
   function handleSubmit(e) {
     e.preventDefault();
-    const loginuser = {
-      email,
-      password,
-    };
+    // const loginuser = {
+    //   email,
+    //   password,
+    // };
 
-    loginUser(loginuser);
+    // loginUser(loginuser);
   }
 
   return (
@@ -107,7 +107,9 @@ const LoginScreen = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <Button type="submit">LOGIN</Button>
+                <Button type="submit">
+                  <Link to="/home">LOGIN</Link>{" "}
+                </Button>
               </Form>
             </div>
             <div>
